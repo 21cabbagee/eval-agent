@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import PruningAlertBanner from './components/PruningAlertBanner';
 import AgentLeaderboard from './components/AgentLeaderboard';
 import IngestWebhookDeck from './components/IngestWebhookDeck';
+import OutcomeChart from './components/OutcomeChart';
 import CabModal from './components/CabModal';
 import Footer from './components/Footer';
 import { INITIAL_AGENTS, MOCK_PRUNING_ALERTS } from './data/mockAgents';
@@ -57,6 +58,9 @@ export default function App() {
           onJumpToAlert={scrollToAlerts}
           onJumpToWebhook={scrollToWebhook}
         />
+
+        {/* Julien Bek $1:$6 Economic Engine / Larry Ellison SLA Proof */}
+        <OutcomeChart onCtaClick={() => setIsCabOpen(true)} />
 
         {/* Automated Pruning Recommendations Banner */}
         <PruningAlertBanner
